@@ -94,7 +94,6 @@ img {
 .nav {
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
   position: fixed;
   top: 0;
   left: 0;
@@ -112,10 +111,12 @@ img {
 @media (max-width: 28.75em) {
   .nav {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .nav-list {
     margin: 0 1rem;
+    flex-basis: 50%;
   }
 }
 
