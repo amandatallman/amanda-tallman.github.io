@@ -94,6 +94,7 @@ img {
 .nav {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   position: fixed;
   top: 0;
   left: 0;
