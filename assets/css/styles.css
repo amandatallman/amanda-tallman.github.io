@@ -32,7 +32,7 @@ html {
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
-    font-size: 60%
+    font-size: 60%;
   }
 }
 
@@ -93,8 +93,8 @@ img {
 
 .nav {
   display: flex;
-  justify-content: flex-end;
-  position: fixed;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -103,20 +103,27 @@ img {
   z-index: 10;
 }
 
-.nav-list {
+nav ul {
+  padding: 0;
   display: flex;
-  margin-right: 2rem;
+  margin-left: auto;
 }
 
-@media (max-width: 28.75em) {
+@media (max-width: 640px) {
   .nav {
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center
   }
-
   .nav-list {
-    margin: 0 1rem;
-    flex-basis: 50%;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav li {
+    margin: 0.8em 0;
   }
 }
 
@@ -134,17 +141,22 @@ img {
 
 body::before {
   content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
-	background: #2f2754;
-	background-image: linear-gradient( 115deg, rgba(47, 39, 84, 0.8), rgba(84, 39, 67, 0.7)), url(https://raw.githubusercontent.com/amandatallman/work-samples/main/assets/cat%20background.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #2f2754;
+  background-image: linear-gradient(
+      115deg,
+      rgba(47, 39, 84, 0.8),
+      rgba(84, 39, 67, 0.7)
+    ),
+    url(https://raw.githubusercontent.com/amandatallman/work-samples/main/assets/cat%20background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .welcome-section {
@@ -153,9 +165,10 @@ body::before {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
+  padding-top: 5rem;
   background-color: transparent;
-  text-shadow: 3px 3px #000000
+  text-shadow: 3px 3px #000000;
 }
 
 .welcome-text {
@@ -173,13 +186,13 @@ body::before {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue)
+  background: var(--main-blue);
 }
 
 .projects-section-header {
   max-width: 1200px;
   margin: 0 auto 5rem auto;
-  border-bottom: 0.2rem solid var(--main-white)
+  border-bottom: 0.2rem solid var(--main-white);
 }
 
 @media (max-width: 28.75em) {
@@ -202,7 +215,7 @@ body::before {
   .projects-section {
     padding: 6rem 1rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -235,13 +248,13 @@ body::before {
 }
 
 .certs {
-   padding: 10rem 2rem;
+  padding: 10rem 2rem;
 }
 
 .cert-text {
   max-width: 1200px;
   margin: 0 auto 5rem auto;
-  border-bottom: 0.2rem solid var(--main-white)
+  border-bottom: 0.2rem solid var(--main-white);
 }
 
 .btn {
@@ -270,7 +283,7 @@ body::before {
 
 .contact-section-header > h2 {
   font-size: 6rem;
-  text-shadow: 3px 3px #000000
+  text-shadow: 3px 3px #000000;
 }
 
 @media (max-width: 28.75em) {
